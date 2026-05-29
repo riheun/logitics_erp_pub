@@ -1,5 +1,5 @@
 'use client';
-import { useState} from 'react';
+import { useEffect, useState} from 'react';
 import baseApi from '@/common/api/baseApi';
 
 import s from './login.module.css';
@@ -10,9 +10,22 @@ export default function Page() {
 
     const goLogin = async () => {
         const res = await baseApi.post('/api/v1/employees/login', {...logigInfo});
-        localStorage.setItem("키값", "넣을값");
-        const 로컬스토리지꺼낸데이터 = localStorage.getItem("키값");
+        localStorage.setItem("accessToken", res.data.data.accessToken);
     }
+
+    useEffect(() => {
+        const getEmployees = async () => {
+            const token = localStorage.getItem('accessToken');
+            const res = await baseApi.get('/api/v1/employees', {
+                headers: {
+                    'Authorization':
+                    'Bearer ${token}'
+                }
+            });
+            console.log(res);
+        }
+        getEmployees();
+    }, []);
 
     return (
         <div className={s.container}>
