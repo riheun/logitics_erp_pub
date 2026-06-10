@@ -1,6 +1,3 @@
 깃 연습중
-<<<<<<< Updated upstream
 이마진 바보
-=======
-이맷쥔
->>>>>>> Stashed changes
+지금 나는 배고프다 졸리다.
