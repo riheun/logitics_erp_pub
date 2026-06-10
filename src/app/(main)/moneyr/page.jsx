@@ -155,6 +155,121 @@ export default function Page() {
                                 <strong>500,000원</strong>
                             </div>
                         </div>
+                        <div className={s.line2}>
+                            <div className={s.man}>
+                                <div className={s.man_title}>
+                                    <div className={s.man_box}>선</div>
+                                    <h3>경조 대상자 정보</h3>
+                                </div>
+                                <div className={s.man_input}>
+                                    <div className={s.man_label}>
+                                        <label htmlFor="name">
+                                            <h3>대상자 성명</h3>
+                                            <img src="/star.png" alt="" />
+                                        </label>
+                                        <label htmlFor="relation">
+                                            <h3>관계</h3>
+                                            <img src="/star.png" alt="" />
+                                        </label>
+                                        <label htmlFor="datem">
+                                            <h3>경조일</h3>
+                                            <img src="/star.png" alt="" />
+                                        </label>
+                                        <label htmlFor="place">
+                                            경조 장소
+                                        </label>
+                                    </div>
+                                    <div className={s.man_input_box}>
+                                        <input type="text" placeholder='성명을 입력하세요' className={s.input1} />
+                                        <select name="relation" id="" className={s.input2}>
+                                            <option value="본인">본인</option>
+                                            <option value="부">부</option>
+                                            <option value="모">모</option>
+                                            <option value="형제">형제</option>
+                                        </select>
+                                        <input type="date" className={s.input3}  />
+                                        <input type="text" placeholder='장소를 입력하세요 (선택)' className={s.input4} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={s.line3}>선</div>
+                            <div className={s.account}>
+                                <div className={s.account_title}>
+                                    <div className={s.account_title_box}>선</div>
+                                    <h3>지급 계좌</h3>
+                                    <img src="/star.png" alt="" />
+                                </div>
+                                <div className={s.account_box}>
+                                    <div className={s.account_input}>
+                                        <div className={s.account_input_label}>
+                                            <label htmlFor="bank">은행</label>
+                                            <label htmlFor="account">계좌번호</label>
+                                            <label htmlFor="bankname">예금주</label>
+                                        </div>
+                                        <div className={s.account_input_input}>
+                                            <select name="bank" id="">
+                                                <option value="국민은행">국민은행</option>
+                                                <option value="우리은행">우리은행</option>
+                                                <option value="하나은행">하나은행</option>
+                                            </select>
+                                            <input type="text" placeholder='- 없이 숫자만 입력' />
+                                            <input type="text" placeholder='이름' />
+                                        </div>
+                                        <button className={s.check_btn}>
+                                            <div className={s.check_box}>
+                                                <img src="/check3.png" alt="" />
+                                                <h3>계좌 확인</h3>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={s.line4}>선</div>
+                            <div className={s.file}>
+                                <div className={s.file_title}>
+                                    <div className={s.file_title_box}>선</div>
+                                    <h3>첨부파일</h3>
+                                </div>
+                                <div className={s.file_content}>
+                                    <img src="/file2.png" alt="" className={s.pile} />
+                                    <h3>청첩장·출생증명서 등 관련 서류를 첨부해 주세요</h3>
+                                    <span>PDF, JPG, PNG · 최대 10MB · 파일 3개까지</span>
+                                    <button className={s.file_btn}>
+                                        <div className={s.file_btn_box}>
+                                            <img src="/upload.png" alt="" />
+                                            <h4>파일 선택</h4>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className={s.file_load}>
+                                    <img src="/file3.png" alt="" />
+                                    <h3>청첩장_이영희.pdf</h3>
+                                    <span>238 KB · 업로드 완료</span>
+                                </div>
+                            </div>
+                            <div className={s.bgo}>
+                                <div className={s.bgo_title}>
+                                    <h3>비고</h3>
+                                </div>
+                                <div className={s.bgo_content}>
+                                    <input type="text" placeholder='추가 사항을 입력하세요. (선택)' />
+                                </div>
+                            </div>
+                            <div className={s.etc}>
+                                <button className={s.cancel_btn}>
+                                    <div className={s.cancel_box}>
+                                        <img src="/cancel.png" alt="" />
+                                        <h3>취소</h3>
+                                    </div>
+                                </button>
+                                <button className={s.go_btn}>
+                                    <div className={s.go_box}>
+                                        <img src="/go.png" alt="" />
+                                        <h3>신청하기</h3>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
