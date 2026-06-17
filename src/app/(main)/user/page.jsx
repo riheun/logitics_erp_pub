@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Nav from "@/component/nav";
 import Sub from "@/component/sub";
 
-export default function page() {
+export default function Page() {
   const [employees, setEmployees] = useState([]);
   const [keyword, setKeyword] = useState();
 
@@ -22,6 +22,21 @@ export default function page() {
     });
     console.log(res.data.data);
     setEmployees(res.data.data);
+  };
+
+  // [다음주소 api] 2. 주소 선택시 데이터 받기
+  const openPostcode = () => {
+    if (!window || window === undefined) return;
+
+    const postCode = new window.daum.Postcode({
+      oncomplete(data) {
+        // 여기서 setter로 처리
+        console.log("선택한 주소 >>> ", data)
+      },
+    });
+
+    postCode.open();
+
   };
 
   useEffect(() => {
@@ -232,7 +247,7 @@ export default function page() {
               <div className={style.ad1}>
                 <label htmlFor="우편번호">우편번호</label>
                 <input type="text" placeholder="우편번호" />
-                <div className={style.search}>
+                <div className={style.search} onClick={openPostcode}>
                   <img src="/search5.png" alt="" />
                   <h3>주소검색</h3>
                 </div>
