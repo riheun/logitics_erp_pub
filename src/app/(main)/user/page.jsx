@@ -126,6 +126,146 @@ export default function page() {
           </div>
         </div>
       </section>
+      <div className={style.modal}>
+        <div className={style.modal_title}>
+          <div className={style.modal_title1}>
+            <img src="/userpl.png" alt="" />
+            <h3>인사정보등록</h3>
+          </div>
+          <div className={style.cancel}>
+            <img src="/ex2.png" alt="" />
+          </div>
+        </div>
+        <div className={style.modal_content}>
+          <div className={style.m_info}>
+            <div className={style.m_info_title}>
+              <div className={style.info_box}>박스</div>
+              <h3>기본정보</h3>
+            </div>
+            <div className={style.m_info1}>
+              <div className={style.m_info1_label1}>
+                <label htmlFor="num">사원번호</label>
+                <img src="/star.png" alt="" />
+              </div>
+              <div className={style.m_info1_label2}>
+                <label htmlFor="name">성명</label>
+                <img src="/star.png" alt="" />
+              </div>
+              <div className={style.m_info_input1}>자동생성</div>
+              <input type="text" placeholder="성명" className={style.name} />
+            </div>
+            <div className={style.m_info1}>
+              <div className={style.m_info1_label1}>
+                <label htmlFor="num">부서</label>
+                <img src="/star.png" alt="" />
+              </div>
+              <div className={style.m_info1_label2}>
+                <label htmlFor="name">직급</label>
+                <img src="/star.png" alt="" />
+              </div>
+              <select name="" id="" className={style.depart}>
+                <option value="부서를 선택하세요">부서를 선택하세요</option>
+                <option value="개발팀">개발팀</option>
+                <option value="경영지원팀">경영지원팀</option>
+                <option value="인사팀">인사팀</option>
+                <option value="영업팀">영업팀</option>
+              </select>
+              <select name="" id="" className={style.rank}>
+                <option value="부서를 선택하세요">직급을 선택하세요</option>
+                <option value="부장">부장</option>
+                <option value="과장">과장</option>
+                <option value="대리">대리</option>
+                <option value="사원">사원</option>
+              </select>
+            </div>
+            <div className={style.m_info1}>
+              <div className={style.m_info1_label1}>
+                <label htmlFor="num">입사일</label>
+                <img src="/star.png" alt="" />
+              </div>
+              <div className={style.m_info1_label2}>
+                <label htmlFor="name">재직상태</label>
+                <img src="/star.png" alt="" />
+              </div>
+              <input type="date" className={style.date} />
+              <div className={style.radio}>
+                <input type="radio" />
+                <span>재직중</span>
+                <input type="radio" />
+                <span>휴직중</span>
+                <input type="radio" />
+                <span>퇴직</span>
+              </div>
+            </div>
+          </div>
+          <div className={style.phone}>
+            <div className={style.phone_title}>
+              <div className={style.phone_box}>박스</div>
+              <h3>연락처</h3>
+            </div>
+            <div className={style.phone_content}>
+              <div className={style.phone_label1}>
+                <label htmlFor="">휴대폰</label>
+                <img src="/star.png" alt="" />
+              </div>
+              <div className={style.phone_label2}>
+                <label htmlFor="">이메일</label>
+              </div>
+              <input
+                type="text"
+                placeholder="010-0000-0000"
+                className={style.ph}
+              />
+              <input
+                type="text"
+                placeholder="example@company.com"
+                className={style.email}
+              />
+            </div>
+          </div>
+          <div className={style.address}>
+            <div className={style.address_title}>
+              <div className={style.address_box}>상자</div>
+              <h3>주소</h3>
+            </div>
+            <div className={style.ad_box}>
+              <div className={style.ad1}>
+                <label htmlFor="우편번호">우편번호</label>
+                <input type="text" placeholder="우편번호" />
+                <div className={style.search}>
+                  <img src="/search5.png" alt="" />
+                  <h3>주소검색</h3>
+                </div>
+              </div>
+            </div>
+            <div className={style.ad2}>
+              <label htmlFor="">도로명 주소</label>
+              <div className={style.ad2_box}>주소검색 후 자동입력</div>
+            </div>
+            <div className={style.ad2}>
+              <label htmlFor="">상세주소</label>
+              <input type="text" placeholder="상세주소를 입력하세요" />
+            </div>
+          </div>
+          <div className={style.w}></div>
+        </div>
+        <div className={style.modal_last}>
+          <div className={style.modal_last1}>
+            <img src="/star.png" alt="" />
+            <span>필수 입력 항목입니다.</span>
+          </div>
+          <div className={style.modal_last2}>
+            <div className={style.cancelm}>
+              <img src="/ex3.png" alt="" />
+              <h3>취소</h3>
+            </div>
+            <div className={style.savem}>
+              <img src="/save4.png" alt="" />
+              <h3>저장</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
